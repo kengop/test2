@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+  version="2.4">
+
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>test.AuthFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/recommendation</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/inventory</url-pattern>
+  </filter-mapping>
+
+   <servlet>
+        <servlet-name>servlettest1</servlet-name>
+        <servlet-class>test.ServletTest1</servlet-class>
+   </servlet>
+   <servlet-mapping>
+     <servlet-name>servlettest1</servlet-name>
+     <url-pattern>/home</url-pattern>
+   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>recommendation</servlet-name>
+    <servlet-class>test.Recommendation</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>recommendation</servlet-name>
+    <url-pattern>/recommendation</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>inventory</servlet-name>
+    <servlet-class>test.Inventory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>inventory</servlet-name>
+    <url-pattern>/inventory</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>addition</servlet-name>
+    <servlet-class>test.Addition</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addition</servlet-name>
+    <url-pattern>/addition</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginPage</servlet-name>
+    <servlet-class>test.LoginPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginPage</servlet-name>
+    <url-pattern>/LoginPage</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginCheck</servlet-name>
+    <servlet-class>test.LoginCheck</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginCheck</servlet-name>
+    <url-pattern>/LoginCheck</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>logout</servlet-name>
+    <servlet-class>test.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>sessiontest</servlet-name>
+    <servlet-class>test.SessionTest</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessiontest</servlet-name>
+    <url-pattern>/sessiontest</url-pattern>
+  </servlet-mapping>
+</web-app>
